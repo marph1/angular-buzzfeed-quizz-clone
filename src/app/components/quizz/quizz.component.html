@@ -6,7 +6,7 @@
   </div>
 
   <div *ngIf=!finished class="quizz_questions">
-      <h3>{{questionSelected.question}}</h3>
+    <h3>{{questionSelected.question}}</h3>
   </div>
 
   <div *ngIf=!finished class="quizz_options">
@@ -20,9 +20,7 @@
     </button>
 
   </div>
-
-  <div *ngIf=finished class="quizz_results">
+  <div *ngIf="finished" class="quizz_results" [ngClass]="{'hero-background': getBackgroundColor() === 'red', 'villain-background': getBackgroundColor() === 'blue'}">
     <h1>O Seu resultado é:</h1>
     <p>{{answerSelected}}</p>
   </div>
-</div>

@@ -38,7 +38,13 @@ export class QuizzComponent implements OnInit {
       console.log(this.questionIndex)
       console.log(this.questionMaxIndex)
     }
+  }
 
+  getBackgroundColor(): string {
+    const countVillain = this.answers.filter(answer => answer === 'A').length;
+    const countHero = this.answers.filter(answer => answer === 'B').length;
+
+    return countVillain > countHero ? 'blue' : 'red';
   }
 
   playerChoose(value:string){

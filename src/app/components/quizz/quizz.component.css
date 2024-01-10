@@ -73,3 +73,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.hero-background {
+  background-color: blue;
+}
+
+.villain-background {
+  background-color: red;
+}
